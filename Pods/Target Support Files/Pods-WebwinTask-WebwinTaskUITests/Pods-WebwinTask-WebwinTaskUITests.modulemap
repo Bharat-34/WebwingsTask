@@ -1,0 +1,6 @@
+framework module Pods_WebwinTask_WebwinTaskUITests {
+  umbrella header "Pods-WebwinTask-WebwinTaskUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
