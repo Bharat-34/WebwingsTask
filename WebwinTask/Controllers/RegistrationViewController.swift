@@ -8,7 +8,7 @@
 import UIKit
 
 class RegistrationViewController: UIViewController {
-
+    
     @IBOutlet weak var userEmailIdTxtField: UITextField!
     @IBOutlet weak var enterPasswrdTxtField: UITextField!
     @IBOutlet weak var reEntrPasswrdTxtField: UITextField!
@@ -16,14 +16,14 @@ class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
     }
     
-  
+    
     @IBAction func RegisterAction(_ sender: UIButton) {
-     
+        
         if userEmailIdTxtField.text != "" {
             
             if emailValidation(userEmailIdTxtField.text!){
@@ -58,9 +58,9 @@ class RegistrationViewController: UIViewController {
         } else {
             alertcontroller(title: "Oops", message: "Please enter Email Id")
         }
-                
+        
     }
     
-   
-
+    
+    
 }

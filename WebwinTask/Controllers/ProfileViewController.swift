@@ -20,6 +20,11 @@ class ProfileViewController: UIViewController,UIImagePickerControllerDelegate,UI
     @IBOutlet weak var countryName: UITextField!
     @IBOutlet weak var countryImage: UIImageView!
     @IBOutlet weak var address: UITextField!
+    @IBOutlet weak var frstNameTxtField: UITextField!
+    @IBOutlet weak var lastNameTxtField: UITextField!
+    @IBOutlet weak var addressTxtField: UITextField!
+    @IBOutlet weak var countryNameTxtField: UITextField!
+    @IBOutlet weak var ageTxtField: UITextField!
     
     
     let locationManager = CLLocationManager()
@@ -71,6 +76,7 @@ class ProfileViewController: UIViewController,UIImagePickerControllerDelegate,UI
         countryPicker.isHidden = false
     }
     
+    
     func openCamersMethod()  {
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -105,6 +111,7 @@ class ProfileViewController: UIViewController,UIImagePickerControllerDelegate,UI
             self.userImage.contentMode = .scaleAspectFill
             self.userImage.image = imagePicked
             
+            
         } else if let img = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         {
             self.userImage.image = img
@@ -116,6 +123,8 @@ class ProfileViewController: UIViewController,UIImagePickerControllerDelegate,UI
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
     
     //Country pickker datasource method:-
     func countryPhoneCodePicker(_ picker: MRCountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage) {
@@ -159,23 +168,22 @@ class ProfileViewController: UIViewController,UIImagePickerControllerDelegate,UI
     func displayLocationInfo(_ placemark: CLPlacemark?) {
         
         if let containsPlacemark = placemark {
-            //stop updating location to save battery life
             locationManager.stopUpdatingLocation()
             let locality = (containsPlacemark.locality != nil) ? containsPlacemark.locality : ""
             let postalCode = (containsPlacemark.postalCode != nil) ? containsPlacemark.postalCode : ""
             let administrativeArea = (containsPlacemark.administrativeArea != nil) ? containsPlacemark.administrativeArea : ""
             let country = (containsPlacemark.country != nil) ? containsPlacemark.country : ""
-            let kkk = (containsPlacemark.subThoroughfare != nil) ? containsPlacemark.subThoroughfare : ""
-            let kk = (containsPlacemark.thoroughfare != nil) ? containsPlacemark.thoroughfare : ""
+            let subThroughFare = (containsPlacemark.subThoroughfare != nil) ? containsPlacemark.subThoroughfare : ""
+            let throughFare = (containsPlacemark.thoroughfare != nil) ? containsPlacemark.thoroughfare : ""
             
-            print(kk!)
-            print(kkk!)
+            print(throughFare!)
+            print(subThroughFare!)
             print(locality!)
             print(postalCode!)
             print(administrativeArea!)
             print(country!)
             
-            let address = "\(kk!),\(kkk!),\(postalCode!),\(locality!),\(administrativeArea!),\(country!)"
+            let address = "\(throughFare!) \(subThroughFare!) \(postalCode!),\(locality!),\(administrativeArea!),\(country!)"
             self.address.text = address
             
         }
@@ -187,6 +195,28 @@ class ProfileViewController: UIViewController,UIImagePickerControllerDelegate,UI
     }
     
     
-    
+    @IBAction func submitAction(_ sender: UIButton) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let user = Users(context: context)
+        
+        let image = userImage.image
+        let data = image!.pngData()
+        
+        user.firstName = self.frstNameTxtField.text
+        user.lastName = self.lastNameTxtField.text
+        user.address = self.addressTxtField.text
+        user.country = self.countryNameTxtField.text
+        user.age = self.ageTxtField.text
+        user.userImage = data
+        
+        // saving data to coreData
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        let vc = self.storyboard?.instantiateViewController(identifier: "ViewController") as! ViewController
+        self.present(vc, animated: false, completion: nil)
+        
+    }
     
 }

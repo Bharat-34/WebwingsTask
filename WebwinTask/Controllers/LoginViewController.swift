@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     var registeredUserId = String()
     var userPassword = String()
     
@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -55,7 +55,7 @@ class LoginViewController: UIViewController {
     
     
     
-
-   
-
+    
+    
+    
 }

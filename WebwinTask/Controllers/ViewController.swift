@@ -8,65 +8,110 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController,CLLocationManagerDelegate {
+class ViewController: UIViewController {
 
-    let locationManager = CLLocationManager()
-
+    @IBOutlet weak var tableView: UITableView!
+    
+    var users : [Users] = []
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
+        
+        self.tableView.tableFooterView = UIView()
+        self.tableView.separatorStyle = .none
+        
+        getData()
+        self.tableView.reloadData()
     }
+    
+    
+    @IBAction func goToRegistration(_ sender: UIButton) {
+        
+        let RegVc = self.storyboard?.instantiateViewController(identifier: "RegistrationViewController") as! RegistrationViewController
+        self.present(RegVc, animated: false, completion: nil)
+    }
+    
+  
 
-    @IBAction func findMyLocation(_ sender: UIButton) {
-        locationManager.delegate = self
-                locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-                locationManager.requestWhenInUseAuthorization()
-                locationManager.startUpdatingLocation()
+}
+
+extension ViewController : UITableViewDelegate,UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return users.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let Cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        
+        let user = users[indexPath.row]
+        
+        Cell.frstName.text = user.firstName
+        Cell.lastName.text = user.lastName
+        Cell.age.text = user.age
+        Cell.country.text = user.country
+        Cell.address.text = user.address
+        Cell.userImge.image = UIImage(data: user.userImage!)
+        return Cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return UITableView.automaticDimension
+
+    }
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return UITableView.automaticDimension
+    }
+    
+    
+    func getData() {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        do {
+            users = try context.fetch(Users.fetchRequest())
+        }
+        catch{
+            print("Fetching failed")
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        if editingStyle == .delete{
+            let user = users[indexPath.row]
+            context.delete(user)
+            
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            
+            do{
+                users = try context.fetch(Users.fetchRequest())
+            }
+            catch{
+                print("Fetching Failed")
+            }
+        }
+        
+        self.tableView.reloadData()
         
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-            CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {(placemarks, error)->Void in
-                
-                if (error != nil) {
-                    print("Reverse geocoder failed with error" + (error?.localizedDescription)!)
-                    return
-                }
-                
-                if (placemarks?.count)! > 0 {
-                    let pm = placemarks?[0]
-                    self.displayLocationInfo(pm)
-                } else {
-                    print("Problem with the data received from geocoder")
-                }
-            })
-        }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        func displayLocationInfo(_ placemark: CLPlacemark?) {
-            
-            if let containsPlacemark = placemark {
-                //stop updating location to save battery life
-                locationManager.stopUpdatingLocation()
-                let locality = (containsPlacemark.locality != nil) ? containsPlacemark.locality : ""
-                let postalCode = (containsPlacemark.postalCode != nil) ? containsPlacemark.postalCode : ""
-                let administrativeArea = (containsPlacemark.administrativeArea != nil) ? containsPlacemark.administrativeArea : ""
-                let country = (containsPlacemark.country != nil) ? containsPlacemark.country : ""
-                let kkk = (containsPlacemark.subThoroughfare != nil) ? containsPlacemark.subThoroughfare : ""
-                let kk = (containsPlacemark.thoroughfare != nil) ? containsPlacemark.thoroughfare : ""
-
-                print(kk!)
-                print(kkk!)
-                print(locality!)
-                print(postalCode!)
-                print(administrativeArea!)
-                print(country!)
-                
-            }
-            
-            func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-                  print("Error while updating location " + error.localizedDescription)
-            }
-            
-        }
-
+        let nxtVc = self.storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
+        nxtVc.users = users[indexPath.row]
+        self.present(nxtVc, animated: false, completion: nil)
+    }
+    
+    
+    
 }
