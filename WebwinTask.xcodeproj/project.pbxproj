@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		058A8E923F8E1790150D59AB /* Pods_WebwinTask_WebwinTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570AF1AE9F0F2392374AF952 /* Pods_WebwinTask_WebwinTaskUITests.framework */; };
+		57EAF9CADB2F4693164FAEFC /* Pods_WebwinTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8158387D3EB9B66B458B784B /* Pods_WebwinTask.framework */; };
+		AA254F88C653F06859AE7F6A /* Pods_WebwinTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3F4481CC3BF88C5AFF673E /* Pods_WebwinTaskTests.framework */; };
 		DB05B6582551629D00BB2918 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05B6572551629D00BB2918 /* AppDelegate.swift */; };
 		DB05B65A2551629D00BB2918 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05B6592551629D00BB2918 /* SceneDelegate.swift */; };
 		DB05B65C2551629D00BB2918 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05B65B2551629D00BB2918 /* ViewController.swift */; };
@@ -16,6 +19,10 @@
 		DB05B6672551629F00BB2918 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB05B6652551629F00BB2918 /* LaunchScreen.storyboard */; };
 		DB05B6722551629F00BB2918 /* WebwinTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05B6712551629F00BB2918 /* WebwinTaskTests.swift */; };
 		DB05B67D2551629F00BB2918 /* WebwinTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05B67C2551629F00BB2918 /* WebwinTaskUITests.swift */; };
+		DB05B68E2551892D00BB2918 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05B68D2551892D00BB2918 /* RegistrationViewController.swift */; };
+		DB05B6932551894000BB2918 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05B6922551894000BB2918 /* LoginViewController.swift */; };
+		DB05B6982551898B00BB2918 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05B6972551898B00BB2918 /* ProfileViewController.swift */; };
+		DB05B6A72551964200BB2918 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05B6A62551964200BB2918 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E3F4481CC3BF88C5AFF673E /* Pods_WebwinTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebwinTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		12E1CE10288E581E28566F8B /* Pods-WebwinTask-WebwinTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebwinTask-WebwinTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-WebwinTask-WebwinTaskUITests/Pods-WebwinTask-WebwinTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
+		31FBB0C4951D0918D5AE24E2 /* Pods-WebwinTask-WebwinTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebwinTask-WebwinTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-WebwinTask-WebwinTaskUITests/Pods-WebwinTask-WebwinTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4ACA888CB89AB454AC863C37 /* Pods-WebwinTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebwinTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-WebwinTaskTests/Pods-WebwinTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
+		570AF1AE9F0F2392374AF952 /* Pods_WebwinTask_WebwinTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebwinTask_WebwinTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60360D7CE0328BDCF14CA63A /* Pods-WebwinTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebwinTask.debug.xcconfig"; path = "Target Support Files/Pods-WebwinTask/Pods-WebwinTask.debug.xcconfig"; sourceTree = "<group>"; };
+		8158387D3EB9B66B458B784B /* Pods_WebwinTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebwinTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A25C3AF573C05E46A2F2F3C9 /* Pods-WebwinTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebwinTask.release.xcconfig"; path = "Target Support Files/Pods-WebwinTask/Pods-WebwinTask.release.xcconfig"; sourceTree = "<group>"; };
 		DB05B6542551629D00BB2918 /* WebwinTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebwinTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB05B6572551629D00BB2918 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB05B6592551629D00BB2918 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +66,11 @@
 		DB05B6782551629F00BB2918 /* WebwinTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebwinTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB05B67C2551629F00BB2918 /* WebwinTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebwinTaskUITests.swift; sourceTree = "<group>"; };
 		DB05B67E2551629F00BB2918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB05B68D2551892D00BB2918 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		DB05B6922551894000BB2918 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DB05B6972551898B00BB2918 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DB05B6A62551964200BB2918 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DE36DD11062E04A9F99E2C55 /* Pods-WebwinTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebwinTaskTests.release.xcconfig"; path = "Target Support Files/Pods-WebwinTaskTests/Pods-WebwinTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57EAF9CADB2F4693164FAEFC /* Pods_WebwinTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA254F88C653F06859AE7F6A /* Pods_WebwinTaskTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +94,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				058A8E923F8E1790150D59AB /* Pods_WebwinTask_WebwinTaskUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40DD549E98E800C67FBE5C39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8158387D3EB9B66B458B784B /* Pods_WebwinTask.framework */,
+				570AF1AE9F0F2392374AF952 /* Pods_WebwinTask_WebwinTaskUITests.framework */,
+				0E3F4481CC3BF88C5AFF673E /* Pods_WebwinTaskTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0F1BA2D24CCE6B6105747BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60360D7CE0328BDCF14CA63A /* Pods-WebwinTask.debug.xcconfig */,
+				A25C3AF573C05E46A2F2F3C9 /* Pods-WebwinTask.release.xcconfig */,
+				31FBB0C4951D0918D5AE24E2 /* Pods-WebwinTask-WebwinTaskUITests.debug.xcconfig */,
+				12E1CE10288E581E28566F8B /* Pods-WebwinTask-WebwinTaskUITests.release.xcconfig */,
+				4ACA888CB89AB454AC863C37 /* Pods-WebwinTaskTests.debug.xcconfig */,
+				DE36DD11062E04A9F99E2C55 /* Pods-WebwinTaskTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DB05B64B2551629D00BB2918 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +131,8 @@
 				DB05B6702551629F00BB2918 /* WebwinTaskTests */,
 				DB05B67B2551629F00BB2918 /* WebwinTaskUITests */,
 				DB05B6552551629D00BB2918 /* Products */,
+				D0F1BA2D24CCE6B6105747BD /* Pods */,
+				40DD549E98E800C67FBE5C39 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,12 +149,11 @@
 		DB05B6562551629D00BB2918 /* WebwinTask */ = {
 			isa = PBXGroup;
 			children = (
-				DB05B6572551629D00BB2918 /* AppDelegate.swift */,
-				DB05B6592551629D00BB2918 /* SceneDelegate.swift */,
-				DB05B65B2551629D00BB2918 /* ViewController.swift */,
-				DB05B65D2551629D00BB2918 /* Main.storyboard */,
+				DB05B69C255194E300BB2918 /* App & Scene Delegate */,
+				DB05B6A12551952E00BB2918 /* Model */,
+				DB05B6A22551953500BB2918 /* Views */,
+				DB05B69D255194FE00BB2918 /* Controllers */,
 				DB05B6632551629F00BB2918 /* Assets.xcassets */,
-				DB05B6652551629F00BB2918 /* LaunchScreen.storyboard */,
 				DB05B6682551629F00BB2918 /* Info.plist */,
 				DB05B6602551629D00BB2918 /* WebwinTask.xcdatamodeld */,
 			);
@@ -131,6 +178,43 @@
 			path = WebwinTaskUITests;
 			sourceTree = "<group>";
 		};
+		DB05B69C255194E300BB2918 /* App & Scene Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				DB05B6572551629D00BB2918 /* AppDelegate.swift */,
+				DB05B6592551629D00BB2918 /* SceneDelegate.swift */,
+			);
+			path = "App & Scene Delegate";
+			sourceTree = "<group>";
+		};
+		DB05B69D255194FE00BB2918 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB05B65B2551629D00BB2918 /* ViewController.swift */,
+				DB05B68D2551892D00BB2918 /* RegistrationViewController.swift */,
+				DB05B6922551894000BB2918 /* LoginViewController.swift */,
+				DB05B6972551898B00BB2918 /* ProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DB05B6A12551952E00BB2918 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB05B6A62551964200BB2918 /* Extensions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB05B6A22551953500BB2918 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB05B65D2551629D00BB2918 /* Main.storyboard */,
+				DB05B6652551629F00BB2918 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB05B681255162A000BB2918 /* Build configuration list for PBXNativeTarget "WebwinTask" */;
 			buildPhases = (
+				DFC10CA690CAC15C2F796DDC /* [CP] Check Pods Manifest.lock */,
 				DB05B6502551629D00BB2918 /* Sources */,
 				DB05B6512551629D00BB2918 /* Frameworks */,
 				DB05B6522551629D00BB2918 /* Resources */,
+				77BA70338477BFEF0D6A64E5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +241,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB05B684255162A000BB2918 /* Build configuration list for PBXNativeTarget "WebwinTaskTests" */;
 			buildPhases = (
+				F6149182EA3705EF7685A9AC /* [CP] Check Pods Manifest.lock */,
 				DB05B6692551629F00BB2918 /* Sources */,
 				DB05B66A2551629F00BB2918 /* Frameworks */,
 				DB05B66B2551629F00BB2918 /* Resources */,
@@ -173,9 +260,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB05B687255162A000BB2918 /* Build configuration list for PBXNativeTarget "WebwinTaskUITests" */;
 			buildPhases = (
+				03ECA2B04D170C186E80B4F6 /* [CP] Check Pods Manifest.lock */,
 				DB05B6742551629F00BB2918 /* Sources */,
 				DB05B6752551629F00BB2918 /* Frameworks */,
 				DB05B6762551629F00BB2918 /* Resources */,
+				3C5CED7AC2421FC6CE4481A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,15 +345,122 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03ECA2B04D170C186E80B4F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WebwinTask-WebwinTaskUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C5CED7AC2421FC6CE4481A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebwinTask-WebwinTaskUITests/Pods-WebwinTask-WebwinTaskUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebwinTask-WebwinTaskUITests/Pods-WebwinTask-WebwinTaskUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebwinTask-WebwinTaskUITests/Pods-WebwinTask-WebwinTaskUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77BA70338477BFEF0D6A64E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebwinTask/Pods-WebwinTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebwinTask/Pods-WebwinTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebwinTask/Pods-WebwinTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFC10CA690CAC15C2F796DDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WebwinTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6149182EA3705EF7685A9AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WebwinTaskTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DB05B6502551629D00BB2918 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB05B6932551894000BB2918 /* LoginViewController.swift in Sources */,
 				DB05B65C2551629D00BB2918 /* ViewController.swift in Sources */,
 				DB05B6582551629D00BB2918 /* AppDelegate.swift in Sources */,
+				DB05B6A72551964200BB2918 /* Extensions.swift in Sources */,
 				DB05B6622551629D00BB2918 /* WebwinTask.xcdatamodeld in Sources */,
+				DB05B6982551898B00BB2918 /* ProfileViewController.swift in Sources */,
 				DB05B65A2551629D00BB2918 /* SceneDelegate.swift in Sources */,
+				DB05B68E2551892D00BB2918 /* RegistrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,11 +633,12 @@
 		};
 		DB05B682255162A000BB2918 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60360D7CE0328BDCF14CA63A /* Pods-WebwinTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X5N43FHKCZ;
+				DEVELOPMENT_TEAM = LGPF8UDVJ2;
 				INFOPLIST_FILE = WebwinTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,11 +653,12 @@
 		};
 		DB05B683255162A000BB2918 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A25C3AF573C05E46A2F2F3C9 /* Pods-WebwinTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X5N43FHKCZ;
+				DEVELOPMENT_TEAM = LGPF8UDVJ2;
 				INFOPLIST_FILE = WebwinTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -475,6 +673,7 @@
 		};
 		DB05B685255162A000BB2918 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4ACA888CB89AB454AC863C37 /* Pods-WebwinTaskTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +696,7 @@
 		};
 		DB05B686255162A000BB2918 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE36DD11062E04A9F99E2C55 /* Pods-WebwinTaskTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,6 +719,7 @@
 		};
 		DB05B688255162A000BB2918 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31FBB0C4951D0918D5AE24E2 /* Pods-WebwinTask-WebwinTaskUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,6 +740,7 @@
 		};
 		DB05B689255162A000BB2918 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12E1CE10288E581E28566F8B /* Pods-WebwinTask-WebwinTaskUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
